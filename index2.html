@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureNest – Sida 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #header2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(39, 174, 96, 0.95);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 24px;
+            height: 68px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        }
+        #turtle { height: 46px; flex-shrink: 0; }
+        .cinzel-header { font-family: "Cinzel", serif; font-weight: 700; font-size: 22px; color: white; white-space: nowrap; }
+        #header2 input { margin-left: auto; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); color: white; font-size: 14px; width: 180px; }
+        #header2 input::placeholder { color: rgba(255,255,255,0.7); }
+        .nav-links { display: flex; gap: 8px; flex-shrink: 0; }
+        .nav-links a { color: #d6ffd6; font-family: Verdana, sans-serif; font-size: 14px; padding: 6px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); text-decoration: none; white-space: nowrap; transition: background 0.2s; }
+        .nav-links a:hover { background: rgba(255,255,255,0.2); }
+        #container2 { display: grid; grid-template-columns: 250px 1fr; min-height: 100vh; gap: 20px; padding: 88px 20px 20px; }
+        #sida2 { background: rgba(255,255,255,0.2); backdrop-filter: blur(6px); border-radius: 12px; padding: 20px; align-self: start; }
+        #articles2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        #articles2 article { background: rgba(255,255,255,0.2); backdrop-filter: blur(6px); border-radius: 12px; height: 250px; overflow: hidden; }
+        #articles2 img { width: 100%; height: 100%; object-fit: cover; }
+        @media (max-width: 768px) {
+            .cinzel-header { display: none; }
+            #header2 input { width: 120px; }
+            #container2 { grid-template-columns: 1fr; padding: 80px 12px 12px; gap: 12px; }
+            #articles2 { grid-template-columns: 1fr; }
+            #articles2 article { height: 200px; }
+        }
+        @media (max-width: 480px) {
+            #header2 { padding: 0 12px; gap: 8px; }
+            #header2 input { display: none; }
+            .nav-links a { padding: 5px 10px; font-size: 12px; }
+            #turtle { height: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header2">
+    <a href="index.html"><img src="img/download.png" id="turtle" alt="NatureNest logotyp – sköldpadda"></a>
+    <span class="cinzel-header">NatureNest</span>
+    <input type="text" placeholder="Sök NatureNest...">
+    <div class="nav-links">
+        <a href="index.html">Sida 1</a>
+        <a href="index2.html">Sida 2</a>
+        <a href="index3.html">Sida 3</a>
+    </div>
+</header>
+
+<div id="container2">
+    <aside id="sida2">
+        <p>Upptäck världen!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia modi at dolor dignissimos, maxime itaque iure voluptatibus tempore et nam nihil.</p>
+    </aside>
+    <div id="articles2">
+        <article><img src="img/scale.webp" alt="Närbild på fjäll och naturlandskap"></article>
+        <article><img src="img/ishotel.jpg" alt="Ishotell omgivet av snö och is"></article>
+        <article><img src="img/fjord.jpg" alt="Vacker norsk fjord med spegelblank vattenyta"></article>
+        <article><img src="img/cavd.jpg" alt="Grottutforskning i mörk underjordisk grotta"></article>
+    </div>
+</div>
+
+</body>
+</html>
